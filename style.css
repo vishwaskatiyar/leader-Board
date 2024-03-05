@@ -1,0 +1,102 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 70px auto;
+  background: linear-gradient(135deg, #5efc8d 0%, #8cffab 100%);
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+input[type="text"],
+input[type="number"],
+button {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 200px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #33b5e5;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 40px;
+  border: 1px solid #33b5e5;
+  box-shadow: 0 4px 6px rgba(51, 181, 229, 0.2);
+}
+
+button:hover {
+  background-color: #0099cc;
+  border: 1px solid #0099cc;
+  transform: scale(1.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* height: 100vh; */
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: none;
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  background-color: #33b5e5;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Animation */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadein 1s;
+}
