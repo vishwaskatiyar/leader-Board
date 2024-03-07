@@ -1,37 +1,46 @@
+/* Global styles */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
 
+/* Container styles */
 .container {
   width: 80%;
   margin: 70px auto;
-  background: linear-gradient(135deg, #5efc8d 0%, #8cffab 100%);
-  color: #333;
-  border-radius: 10px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   padding: 20px;
   overflow: hidden;
+  animation: fadeIn 3s ease-in; /* Increase animation duration to 3s */
 }
 
+/* Heading styles */
 h1 {
   text-align: center;
-  font-size: 36px;
-  color: #fff;
+  font-size: 48px;
+  color: #00e5ff;
   margin-top: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
+.top {
+  margin: 30px;
+}
+
+/* Input and button styles */
 input[type="text"],
 input[type="number"],
 button {
-  font-size: 16px;
-  padding: 10px;
+  font-size: 18px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   margin-right: 10px;
   transition: all 0.3s ease;
 }
@@ -39,32 +48,31 @@ button {
 input[type="text"],
 input[type="number"] {
   width: 200px;
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 2px solid #00e5ff;
 }
 
 button {
-  background-color: #33b5e5;
-  color: #fff;
+  background-color: #00e5ff;
+  color: #121212;
   cursor: pointer;
-  margin-right: 40px;
-  border: 1px solid #33b5e5;
-  box-shadow: 0 4px 6px rgba(51, 181, 229, 0.2);
+  border: 2px solid #00e5ffc0;
+  box-shadow: 0 4px 6px rgba(0, 229, 255, 0.5);
 }
 
 button:hover {
-  background-color: #0099cc;
-  border: 1px solid #0099cc;
+  background-color: #007acc;
+  border: 2px solid #007acc;
   transform: scale(1.05);
 }
 
+/* Table styles */
 table {
   width: 100%;
   border-collapse: collapse;
-  /* height: 100vh; */
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -76,27 +84,58 @@ td {
 }
 
 th {
-  background-color: #33b5e5;
-  color: #fff;
+  background-color: #00e5ff;
+  color: #121212;
   text-transform: uppercase;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Animation */
-@keyframes fadein {
+.fade-in {
+  animation: fadeIn 3s ease; /* Increase animation duration to 3s */
+}
+
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-.container {
-  animation: fadein 1s;
+/* Fade-out animation */
+.fade-out {
+  animation: fadeOut 3s ease; /* Increase animation duration to 3s */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 36px;
+  }
 }
