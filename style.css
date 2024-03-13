@@ -107,6 +107,35 @@ tr:nth-child(even) {
   }
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 200px; /* Specific width */
+  max-height: 200px; /* Maximum height */
+  overflow-y: auto; /* Enable vertical scrollbar */
+
+  border-radius: 5px; /* Add border radius for a nicer look */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 0.3rem;
+  right: 26.5%;
+  color: black;
+}
+
+.dropdown-content div {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown-content div:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
 /* Fade-out animation */
 .fade-out {
   animation: fadeOut 3s ease; /* Increase animation duration to 3s */
